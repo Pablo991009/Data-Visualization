@@ -1,0 +1,7 @@
+# Grafana Image Renderer for ARM Servers
+version: '2'
+services:
+  grafana-renderer-arm64:
+    image: michbeck100/grafana-image-renderer:latest
+    ports:
+      - 18381:8081
