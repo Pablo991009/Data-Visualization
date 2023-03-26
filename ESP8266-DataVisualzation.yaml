@@ -1,19 +1,20 @@
 
 ###### Device name ######
 esphome:
-  name: ESP8266-AN01/DG01/SC01/DH01
-  comment: ESP8266 AN01-Thermocouple/DG01-Digital/SC01-Display/DH01-Humidy
-  friendly_name: Data Visualization
+  name: esp_device
+  comment: an01_dG01_sc01_dh01
+  friendly_name: data_visual
 
  ### Project info ###  
   project:
-    name: "Phantom_Data_Visualization"
-    version: "3.0 Betta"
+    name: "phantom"
+    version: "1.0_betta"
 
 ###### Dev board and platform ######
 esp8266:
   board: nodemcuv2
-
+  fremework:
+    version: recommended
 
 
 ###### Data logger ######
