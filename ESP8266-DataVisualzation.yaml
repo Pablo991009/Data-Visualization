@@ -7,13 +7,13 @@ esphome:
 
  ### Project info ###  
   project:
-    name: "phantom"
+    name: "phantom.data"
     version: "1.0_betta"
 
 ###### Dev board and platform ######
 esp8266:
   board: nodemcuv2
-  fremework:
+  framework:
     version: recommended
 
 
@@ -72,24 +72,25 @@ wifi:
   
 ###### Access Point and Captive Portal Config ######
   ap:
-    ssid: "esp32-dev-kit-template"
+    ssid: "esp_device"
     password: !secret ap_password
-  
+
 captive_portal:
   
 
 
 
 ###### 'Ports' Config ######
+dallas:
+  - pin: GPIO22
+    update_interval: 1s
 
-### ST7735 TFT Screen ###
+ ### ST7735 TFT Screen ###
 spi:
     clk_pin: GPIO18
     mosi_pin: GPIO23
 
-dallas:
-  - pin: GPIO22
-    update_interval: 1s
+
   
 
 
