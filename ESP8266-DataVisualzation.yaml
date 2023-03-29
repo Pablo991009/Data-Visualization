@@ -2,7 +2,7 @@
 ###### Device name ######
 esphome:
   name: esp_device
-  comment: an01_dG01_sc01_dh01
+  comment: an01_dg01_sc01_dh01
   friendly_name: data_visual
 
  ### Project info ###  
