@@ -2,7 +2,11 @@
 ###### Device name ######
 esphome:
   name: esp_device
+<<<<<<< HEAD
   comment: an01_dg01_sc01_dh01                                                 # Meanings: AN=Analogic, DG=Digital, SC=Screen, DH=Digital Humity.
+=======
+  comment: an01_dg01_sc01_dh01
+>>>>>>> 46faaa43999371fa766c1ca59ea0495d6dd0bb8b
   friendly_name: data_visual
 
  ### Project info ###  
@@ -185,8 +189,11 @@ display:
   #      it.print(0, 0, id(roboto), "Phantom Systems");                                       # Date: DD/MM/AA
   #      // Draw a circle in the middle of the display
   #      it.filled_circle(it.get_width() / 2, it.get_height() / 2, 20);
+<<<<<<< HEAD
 
   # Ultimos cambios: 28/03/2023
 
 
   
+=======
+>>>>>>> 46faaa43999371fa766c1ca59ea0495d6dd0bb8b
