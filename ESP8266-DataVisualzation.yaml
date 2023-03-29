@@ -31,7 +31,7 @@ mqtt:
   discovery: false
   broker: !secret mqtt_broker                                                     # Direcccion IP del broker MQTT
   port: !secret mqtt_brokerport                                                   # Puerto libre estandaizado (8083)para MQTT
-#  keepalive: 5s                                                                  #//Opcion de descubrimiento, hace que envie un mesaje para permitir que algun sistema de domotica lo encuentre entre todo el contenido alojado en el broker, en este caso es comentado ya que se espera depender solo de ESP
+#  keepalive: 5s                                                                  # Opcion de descubrimiento, hace que envie un mesaje para permitir que algun sistema de domotica lo encuentre entre todo el contenido alojado en el broker, en este caso es comentado ya que se espera depender solo de ESP
   username: !secret mqtt_user                                                     
   password: !secret mqtt_password                                                 # Uso de contraseña en caso de recurrir al broker y no ESPHome y proteger los mensajes
   discovery_prefix: homeassistant                                                 
