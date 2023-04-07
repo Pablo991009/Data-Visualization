@@ -6,32 +6,32 @@ esphome:
   friendly_name: data_visual
 
  ### Project info ###  
-  project:
-    name: "phantom.data"
-    version: "1.0_betta"
+project:
+  name: "phantom.data"
+  version: "1.0_betta"
 
 ###### Dev board and platform ######
 esp8266:
   board: nodemcuv2
   framework:
-    version: recommended
+  version: recommended
 
 
 ###### Data logger ######                                                        # Logger=Entrega de datos, por defecto entrega informacion parcial pero con la condicion de nivel VERBOSE no se limita la informacion
 logger:
-    level: VERBOSE
+  level: VERBOSE
   
 ###### Home Assistant's Native API Config ######                                 # API de HomeAssitant, permite la conexion con ESPHome sin recurrir a MQTT pasando de 750ms/2000ms a <100ms, el cifrado pemite un viaje seguro en una red
 api:
   encryption:
-    key: !secret api_password
+  key: !secret api_password
   
 ###### MQTT Broker Config ######                                                  # Protocolo IoT (Internet of things) y requiere un broker para almacenar y procesar los mensajes que envia y recibe cada dispositivo
 mqtt:
   discovery: false
   broker: !secret mqtt_broker                                                     # Direcccion IP del broker MQTT
   port: !secret mqtt_brokerport                                                   # Puerto libre estandaizado (8083)para MQTT
-#  keepalive: 5s                                                                  # Opcion de descubrimiento, hace que envie un mesaje para permitir que algun sistema de domotica lo encuentre entre todo el contenido alojado en el broker, en este caso es comentado ya que se espera depender solo de ESP
+  #keepalive: 5s                                                                  # Opcion de descubrimiento, hace que envie un mesaje para permitir que algun sistema de domotica lo encuentre entre todo el contenido alojado en el broker, en este caso es comentado ya que se espera depender solo de ESP
   username: !secret mqtt_user                                                     
   password: !secret mqtt_password                                                 # Uso de contraseña en caso de recurrir al broker y no ESPHome y proteger los mensajes
   discovery_prefix: homeassistant                                                 
@@ -46,9 +46,9 @@ ota:
 ###### Network Config ######                                                      # Slots de red para operacion                               
 wifi:
   networks:
-    - ssid: !secret wifi_ssid                                                     # Nombre de red a la cual podria conectarse la placa de desarrollo
-      bssid: !secret wifi_bssid                                                   # Dirección física del Punto de Acceso o Router al que se conecta la placa, para forzar la conexión a éste
-      password: !secret wifi_password                                             # Contraseña de la red
+  - ssid: !secret wifi_ssid                                                     # Nombre de red a la cual podria conectarse la placa de desarrollo
+    bssid: !secret wifi_bssid                                                   # Dirección física del Punto de Acceso o Router al que se conecta la placa, para forzar la conexión a éste
+    password: !secret wifi_password                                             # Contraseña de la red
 
     - ssid: !secret wifi_ssid2
       bssid: !secret wifi_bssid2
@@ -100,7 +100,7 @@ sensor:
     address: 0x373c01f095e27428                            # 0x1c0000031edd2a28 es el recomendado en la documentacion por ser general
     name: "Sensor DS18B20"
     id: sondatemperatura1                                  # Se usa solo cuando se desea usar multiples sensores similares
-
+    
 
   ### MAX6675 K-type Thermocouple ###                        # SPI bus (Serial Periferical Inteface) 
   - platform: max6675                                                       
@@ -121,4 +121,4 @@ sensor:
     model: AUTO_DETECT
   
 
-# Ultimos cambios: 28/03/2023
+# Ultimos cambios: 06/04/2023
