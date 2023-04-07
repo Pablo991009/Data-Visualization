@@ -50,13 +50,13 @@ wifi:
     bssid: !secret wifi_bssid                                                   # Dirección física del Punto de Acceso o Router al que se conecta la placa, para forzar la conexión a éste
     password: !secret wifi_password                                             # Contraseña de la red
 
-    - ssid: !secret wifi_ssid2
-      bssid: !secret wifi_bssid2
-      password: !secret wifi_password2
+  - ssid: !secret wifi_ssid2
+    bssid: !secret wifi_bssid2
+    password: !secret wifi_password2
 
-    - ssid: !secret wifi_ssid3
-      bssid: !secret wifi_bssid3
-      password: !secret wifi_password3
+  - ssid: !secret wifi_ssid3
+    bssid: !secret wifi_bssid3
+    password: !secret wifi_password3
 
       #### Static IP Address ####                                                 # Direcciones Estaticas (Requiere configuracion del dispositivo de red)
    # manual_ip:
