@@ -6,7 +6,7 @@ esphome:
   friendly_name: data_visual
 
  ### Project info ###  
-project:
+  project:
   name: "phantom.data"
   version: "1.0_betta"
 
@@ -24,7 +24,7 @@ logger:
 ###### Home Assistant's Native API Config ######                                 # API de HomeAssitant, permite la conexion con ESPHome sin recurrir a MQTT pasando de 750ms/2000ms a <100ms, el cifrado pemite un viaje seguro en una red
 api:
   encryption:
-  key: !secret api_password
+   key: !secret api_password
   
 ###### MQTT Broker Config ######                                                  # Protocolo IoT (Internet of things) y requiere un broker para almacenar y procesar los mensajes que envia y recibe cada dispositivo
 mqtt:
@@ -88,8 +88,8 @@ dallas:
 
  ### SPI pin (for MAX6675) ###
 spi:
-  miso_pin: D6                                             # D6 es igual a GPIO16                       curiosly:  MOSI is not required
-  clk_pin: D5                                              # D5 es igual a GIPO05
+  miso_pin: GPIO12                                         # GPIO12 es igual a D6                       curiosly:  MOSI is not required
+  clk_pin: GPIO14                                          # GPIO14 es igual a D5 
 
 
                                                    
@@ -120,5 +120,6 @@ sensor:
     update_interval: 60s
     model: AUTO_DETECT
   
+
 
 # Ultimos cambios: 06/04/2023
