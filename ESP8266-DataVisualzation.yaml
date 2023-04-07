@@ -105,7 +105,7 @@ sensor:
   ### MAX6675 K-type Thermocouple ###                        # SPI bus (Serial Periferical Inteface) 
   - platform: max6675                                                       
     name: "Sensor Thermocouple"
-    cs_pin: GPIO15                                         # D8 es igual GPIO04
+    cs_pin: GPIO15                                         # D8 es igual GPIO15
     update_interval: 60s
 #    spi_id:                                               # Es una direccion ID manual del componente SPI en caso de tener multiples SPI buses
 
